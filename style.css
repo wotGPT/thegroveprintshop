@@ -3,14 +3,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size:100%;
-    padding-bottom: 110%;
+    padding-bottom: 150%;
 }
 .about-background {
     background-image: url('images/buysomethinwillya.avif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 123%;
-    padding-bottom: 120%;
+    padding-bottom: 150%;
 }
 h1 {
     font-size: 400%;
