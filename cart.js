@@ -33,10 +33,19 @@ function emptyCart() {
 }
 
 function displayCart() {
+
+    cart = JSON.parse(localStorage.getItem('cart')) || {};
+
     const cartDisplay = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
     cartDisplay.innerHTML = '';
     let total = 0;
+
+    if (Object.keys(cart).length === 0) {
+        cartDisplay.innerHTML = '<p>Cart is empty.</p>';
+        cartTotal.textContent = '';
+        return;
+    }
 
     for (let id in cart) {
         const item = cart[id];
@@ -46,7 +55,7 @@ function displayCart() {
         cartDisplay.innerHTML += `
             <div>
                 ${item.name} - $${item.price} x ${item.quantity} = $${itemTotal}
-                <button onclick="removeFromCart(${id})">Remove One</button>
+                <button onclick="removeFromCart('${id}')">Remove One</button>
             </div>
         `;
     }
