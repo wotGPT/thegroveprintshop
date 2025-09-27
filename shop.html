@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Shop : TheGrovePrintShop</title>
+    </head>
+
+    <body>
+
+        <center><h2>Shop</h2>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+
+        <div class="shirt1">
+            <img src="images\logo.jpg" alt="Logo" height="300px" width="300px" />
+            <h4 style="color: white;">The Mark</h4>
+            <p style="color: white;">$20</p>
+            <button onclick="addToCart(1, 'The Mark', 20)">Add to Cart</button>
+        </div>
+
+        <div class="shirt2">
+            <img src="images/sauronshirt.webp" alt="Logo" height="300px" width="300px" />
+            <h4 style="color: white;">The Dark Lord</h4>
+            <p style="color: white;">$20</p>
+            <button onclick="addToCart(2, 'The Dark Lord', 20)">Add to Cart</button>
+        </div>
+
+        <a href="cart.html">Go to Cart</a>
+
+        <script src="cart.js"></script>
+    </body>
+</html>
