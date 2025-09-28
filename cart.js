@@ -53,14 +53,41 @@ function displayCart() {
         total += itemTotal;
 
         cartDisplay.innerHTML += `
-            <div>
-                ${item.name} - $${item.price} x ${item.quantity} = $${itemTotal}
-                <button onclick="removeFromCart('${id}')">Remove One</button>
+           <div class="cart-item">
+                <div class="item-info">
+                    <span class="item-name">${item.name}</span>
+                    <span class="item-price">$${item.price}</span>
+                </div>
+                <div class="quantity-controls">
+                    <button onclick="decreaseQuantity('${id}')">-</button>
+                    <span class="quantity-box">${item.quantity}</span>
+                    <button onclick="increaseQuantity('${id}')">+</button>
+                </div>
+                <div class="item-total">$${itemTotal}</div>
             </div>
         `;
     }
 
-    cartTotal.textContent = `Subtotal: $${total}`;
+    cartTotal.textContent = `Subtotal: $${total.toFixed(2)}`;
+}
+
+function increaseQuantity(productId) {
+    if (cart[productId]) {
+        cart[productId].quantity += 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart();
+    }
+}
+
+function decreaseQuantity(productId) {
+    if (cart[productId]) {
+        cart[productId].quantity -= 1;
+        if (cart[productId].quantity <= 0) {
+            delete cart[productId];
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCart();
+    }
 }
 
 function checkout() {

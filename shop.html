@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Shop : TheGrovePrintShop</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shop : TheGrovePrintShop</title>
+</head>
+<body>
 
-    <body>
+    <h2 class="center-text">Shop</h2>
 
-        <center><h2>Shop</h2></center>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
 
-        <center>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
+    <h3 class="center-text">Creations</h3>
 
-        <h3>Creations</h3>
+    <div class="products-container">
 
         <div class="product" id="shirt1">
-            <img src="images/logo.jpg" alt="Logo" height="300px" width="300px" />
-            <h4 style="color: white;">The Mark</h4>
-            <p style="color: white;">$25</p>
+            <img src="images/logo.jpg" alt="The Mark" />
+            <h4>The Mark</h4>
+            <p class="price">$25</p>
             <button onclick="addToCart('shirt1', 'The Mark', 25)">Add to Cart</button>
         </div>
 
         <div class="product" id="shirt2">
-            <img src="images/logo.jpg" alt="Logo" height="300px" width="300px" />
-            <h4 style="color: white;">The Dark Lord</h4>
-            <p style="color: white;">$25</p>
+            <img src="images/logo.jpg" alt="The Dark Lord" />
+            <h4>The Dark Lord</h4>
+            <p class="price">$25</p>
             <button onclick="addToCart('shirt2', 'The Dark Lord', 25)">Add to Cart</button>
         </div>
 
-        <a href="cart.html">Go to Cart</a>
+    </div>
 
-        <script src="cart.js"></script>
+    <a href="cart.html" class="center-text">Go to Cart</a>
 
-        </center>
+    <script src="cart.js"></script>
 
-    </body>
+</body>
 </html>
